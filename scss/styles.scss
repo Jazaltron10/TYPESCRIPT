@@ -1,0 +1,82 @@
+@import 'utilities';
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    margin: 0;
+    font-family: $font-stack; 
+    
+    
+    .wrapper{
+        max-width: 960px;
+        margin: 0 auto;
+    }
+    h1{
+        margin: 40px auto;
+        color: #ff0aa7;
+        text-align: center;
+    }
+    ul{
+        padding:0;
+        list-style: none;
+    }
+    /* li{
+    
+    }
+    li h4{
+    
+    }
+    li p{
+    
+    } */
+    footer{
+        background-color: #eee;
+        padding: 100px;
+        margin-top: 100px;
+    }
+    form{
+        max-width: 960px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    label{
+        display: block;
+        font-weight: bold;
+        font-size: 0.8em;
+        color: #333;
+        margin: 16px 0px 6px;
+    }
+    input, select{
+        padding: 10px;
+        border: 1px groove #e1e1e1;
+        border-radius: 5px;
+    }
+    .field{
+        display: inline-block;
+        margin: 0 10px;
+    }
+    button{
+        color: white;
+        border: 0;
+        background-color: #ff0aa7;
+        padding: 10px;
+        min-width: 100px;
+        border-radius: 5px;
+    }
+    footer a{
+        text-align: center;
+        display: block;
+        color: #999;
+        margin-top: 50px;
+        font-size: 0.7em;
+        text-decoration: none;
+        transition: .5s ease-in;
+    }
+    
+    footer a:hover{
+        color: red;
+    }
+}
