@@ -53,5 +53,4 @@ ninja = {
     name: "koshui",
     belt: 'orange',
     age: 40
-    //skills: [] //gives error
 }
