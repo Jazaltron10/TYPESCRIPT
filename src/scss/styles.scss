@@ -21,20 +21,22 @@ body{
             text-align: center;
         }
         ul{
-            padding:0;
+            padding: 1rem;
             list-style: none;
             li{
-                padding: 6px 10px;
-                border: 1px solid #eee;
+                padding: 15px 15px;
+                border: 1px solid $pink_color;
                 margin: 10px auto;
+                border-radius: $br;
+                background-color: aquamarine;
             }
             h4{
-                color: yellow;
+                color: $pink_color;
                 margin: 0;
-                text-transform: capitalize;
+                text-transform: uppercase;
             }
             p{
-                color: #333;
+                color: black;
                 margin: 8px 0 0;
             } 
 
@@ -47,7 +49,7 @@ body{
     footer{
         background-color: aquamarine;
         padding: 100px;
-        margin-top: 200px;        
+        margin-top: 100px;        
         
             form{
                 max-width: 960px;
@@ -89,7 +91,7 @@ body{
             }
 
             a:hover{
-                color: yellow;
+                color: $pink_color;
                 transform: scale(2);
             }
         }
