@@ -9,6 +9,7 @@ body{
     background-color: #022;
     margin: 0;
     font-family: $font-stack; 
+    max-height: 100vw;
     
     
     .wrapper{
@@ -46,51 +47,58 @@ body{
     footer{
         background-color: aquamarine;
         padding: 100px;
-        margin-top: 100px;
+        margin-top: 200px;        
         
-        form{
-            max-width: 960px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        label{
-            display: block;
-            font-weight: bold;
-            font-size: 0.8em;
-            color: #333;
-            margin: 16px 0px 6px;
-        }
-        input, select{
-            padding: 10px;
-            border: 1px groove #a11e1e;
-            border-radius: 5px;
-        }
-        .field{
-            display: inline-block;
-            margin: 0 10px;
-        }
-        button{
-            color: white;
-            border: 0;
-            background-color: $pink_color;
-            padding: 10px;
-            min-width: 100px;
-            border-radius: 5px;
-        }
-        a{
-            text-align: center;
-            display: block;
-            color: #999;
-            margin-top: 50px;
-            font-size: 0.7em;
-            text-decoration: none;
-            transition: 1s ease-in;
-        }
-        
-        a:hover{
-            color: yellow;
-            transform: scale(2);
+            form{
+                max-width: 960px;
+                margin: 0 auto;
+                text-align: center;
+            }
+            label{
+                display: block;
+                font-weight: bold;
+                font-size: 0.8em;
+                color: #333;
+                margin: 16px 0px 6px;
+            }
+            input, select{
+                padding: 10px;
+                border: 1px groove #a11e1e;
+                border-radius: 5px;
+            }
+            .field{
+                display: inline-block;
+                margin: 0 10px;
+            }
+            button{
+                color: white;
+                border: 0;
+                background-color: $pink_color;
+                padding: 10px;
+                min-width: 100px;
+                border-radius: 5px;
+            }
+            a{
+                text-align: center;
+                display: block;
+                color: #999;
+                margin-top: 50px;
+                font-size: 0.7em;
+                text-decoration: none;
+                transition: 1s ease-in;
+            }
+
+            a:hover{
+                color: yellow;
+                transform: scale(2);
+            }
         }
     }
 
+
+
+@media (max-width:1030px){
+    button{
+        margin: 1rem 0rem;
+    }
 }

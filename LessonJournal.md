@@ -112,3 +112,19 @@ Blackbelt = true;
 "include":["src"]
 This is used to prevent any typescript file outside of the src folder from compiling to vanilla js 
 
+
+
+in typescript we have three different types of access modifiers they are 
+- public -> this is the default access modifier, it simply means that the propertyof a class can be accessed and modified from anywhere outside the class as well as within the class
+
+- private -> this access modifier restricts the accessing and modification of the properties of a class to within the class alone.
+with this type of accessing, properties can only be accessed through the class methods.
+
+- readonly -> this type of access modifier, allows the properties of a class to be accessed from anywhere with the caveat that it cannot be changed at all not even within the class itself, but it can be accessed from anywhere.
+
+
+
+
+    readonly client: string; // Only allows us to read the value both inside and outside of the class but not change the value 
+    private details: string; //change and read value only within the class 
+    public amount: number;  // change and read value outside/inside of the class
