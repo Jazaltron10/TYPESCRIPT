@@ -1,4 +1,3 @@
-"use strict";
 let character = 'mario';
 let age = 30;
 let jump = 50;
@@ -168,7 +167,21 @@ loginDetails = (ninja) => {
 };
 loginDetails({ name: "john", age: 52 });
 // The DOM Typecasting
+const anchor = document.querySelector('a');
+/* The exclammation mark tells typescript that we know what the return value would be and it would not be null */
+if (anchor) {
+    console.log(anchor.href);
+}
+/*Typescript does not have a direct access to the html page during development */
+console.log(anchor.href);
+/*
+Typescript contains special types for every DOM Element
+So when we use a particular DOM ELement typescript knows all the different types of properties on that element and provides it to us in vscode with intellisense
+*/
+//const form = document.querySelector('form')!;
 const form = document.querySelector('.new-item-form');
+/* Typecasting  is used to tell typescript the type of an element being used in the DOM*/
+//console.log(form.children);
 // Grabbing the different Inputs 
 const type = document.querySelector('#type');
 const tofrom = document.querySelector('#tofrom');
@@ -178,3 +191,67 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
     console.log(type.value, tofrom.value, details.value, +amount.value);
 });
+//Classes
+/*A class is basically a blueprint for an object */
+class Invoice {
+    constructor(c, d, a) {
+        this.client = c;
+        this.details = d;
+        this.amount = a;
+    }
+    format() {
+        return `${this.client} owes £${this.amount} for ${this.details}`;
+    }
+}
+const invOne = new Invoice('mario', 'work on the mario website', 250);
+const invTwo = new Invoice('luigi', 'work on the luigi website', 300);
+//console.log(invOne, invTwo)
+// Here only objects created using this invoice class can be added to this array
+let invoices = []; // this single line here makes sure that the array invoices is of the type invoice(which is a class).
+invoices.push(invOne);
+invoices.push(invTwo);
+console.log(invoices);
+// whenever we create a new object by default all of the properties of that class are public and therefore can be changed by anyone
+invOne.client = 'yoshi';
+invTwo.amount = 590;
+console.log(invoices);
+console.log(invOne, invTwo);
+//console.log(invOne, invTwo)
+invoices.push(invOne);
+invoices.push(invTwo);
+invoices.forEach(inv => {
+    console.log(inv.client, inv.amount, inv.format());
+});
+/*The interface is not used to create new objects like a class but rather to enforce a certain structure on how objects created should look and feel like
+The names of parameters do not really matter, this is because a parameter is just a placeholder or an empty variable waiting to be passed in an argument */
+const me = {
+    name: "jane",
+    age: 30,
+    speak(text) {
+        console.log(text);
+    },
+    spend(amount) {
+        console.log('I spent', amount);
+        return amount;
+    }
+};
+const greetPerson = (person) => {
+    console.log('hello ', person.name);
+};
+greetPerson(me);
+console.log(me);
+//let someone: Isperson;
+//<!-- Implementation of interfaces with Objects  -->
+//import { Invoice } from './Classes/Invoice.js';
+import { Payment } from './Classes/Payments.js';
+let docOne;
+let docTwo;
+/*docOne and docTwo can both be an invoice and a payment respectively because both the invoice and payments class implements the HasFormatter
+interface */
+docOne = new Invoice('yoshi', 'web work', 250);
+docTwo = new Payment('mario', 'plumbing wok', 200);
+/*Now we are saying that only objects which implement the HasFormatter interface can go into the array */
+let docs = [];
+docs.push(docOne);
+docs.push(docTwo);
+console.log(docs);
