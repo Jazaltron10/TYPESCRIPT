@@ -22,19 +22,19 @@ const amount =  document.querySelector('#amount') as HTMLInputElement;
 form.addEventListener('submit', (e: Event) => {
     e.preventDefault();
 
+    // Using tuples and the spread operator on the user input
+    let values: [string, string, number];
+    values = [tofrom.value, details.value, +amount.value] 
+
     let doc: HasFormatter;
     if (type.value === 'invoice'){
-        doc = new Invoice(tofrom.value, details.value, +amount.value);
+        doc = new Invoice(...values);
     }else{
-        doc = new Payment(tofrom.value, details.value, +amount.value);
+        doc = new Payment(...values);
     }
     list.render(doc, type.value, 'end')
     
 });
-
-
-
-
 
 
 

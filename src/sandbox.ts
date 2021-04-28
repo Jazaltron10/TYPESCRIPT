@@ -26,7 +26,7 @@ console.log(numbers);
 // numbers[1]='shaun';
 
 
-let mixed = ['ken',4,'chun-li', 8, 9, true];
+let mixed = ['ken', 4, 'chun-li', 8, 9, true];
 
 mixed.push('sryu');
 mixed.push(10);

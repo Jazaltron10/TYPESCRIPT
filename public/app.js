@@ -12,12 +12,15 @@ const details = document.querySelector('#details');
 const amount = document.querySelector('#amount');
 form.addEventListener('submit', (e) => {
     e.preventDefault();
+    // Using tuples and the spread operator on the user input
+    let values;
+    values = [tofrom.value, details.value, +amount.value];
     let doc;
     if (type.value === 'invoice') {
-        doc = new Invoice(tofrom.value, details.value, +amount.value);
+        doc = new Invoice(...values);
     }
     else {
-        doc = new Payment(tofrom.value, details.value, +amount.value);
+        doc = new Payment(...values);
     }
     list.render(doc, type.value, 'end');
 });
