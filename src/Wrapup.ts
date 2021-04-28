@@ -107,7 +107,8 @@ Tuples = () => {
 
     student = ['chun-li', 2233223];
 
-
+    let studentName: string = "jasper"
+    console.log(tup, typeof(studentName), student)
 
 }
 

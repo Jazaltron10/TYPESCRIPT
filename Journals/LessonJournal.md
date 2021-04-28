@@ -125,6 +125,18 @@ with this type of accessing, properties can only be accessed through the class m
 
 
 
-    readonly client: string; // Only allows us to read the value both inside and outside of the class but not change the value 
-    private details: string; //change and read value only within the class 
-    public amount: number;  // change and read value outside/inside of the class
+
+readonly client: string; // Only allows us to read the value both
+inside and outside of the class but not change the value 
+private details: string; //change and read value only within the
+class 
+public amount: number;  // change and read value outside/inside ofthe class
+
+  
+
+### Webpack and Typescript
++   How to use Webpack to compile TypeScript into JavaScript
++   How to bundle source code into a single javascript file
++   How to use a Webpack dev server
++   How to use ES6 modules and source maps(debugging)
+
